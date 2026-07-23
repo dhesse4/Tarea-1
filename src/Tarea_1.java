@@ -8,28 +8,28 @@ public class Tarea_1
 
 
         System.out.print("Ingresa de cuantos numeros va a ser el array: ");
-        int cantidad = scan.nextInt();
+        int longitud = scan.nextInt();
 
-        int array[] = new int[cantidad];
+        int numeros[] = new int[longitud];
 
-        for(int i = 0; i < cantidad; i++)
+        for(int i = 0; i < longitud; i++)
         {
             System.out.print("Ingresa un numero que desees: ");
-            array[i] = scan.nextInt();
+            numeros[i] = scan.nextInt();
         }
         
         System.out.print("Ingresa que deseas hacer con el array deseas obtener 1. Numero Mayor 2. Numero Menor 3.Ordenar: ");
-        int decision = scan.nextInt();
+        int eleccion = scan.nextInt();
 
-        if(decision == 1) System.out.print("El numero mayor del array es: " + mayorMenor(array, cantidad, decision));
-        else if (decision==2) System.out.print("El numero menor del array es:" + mayorMenor(array, cantidad, decision));
-        else ordenarArray(array, cantidad);
+        if(eleccion == 1) System.out.print("El numero mayor del array es: " + obtenerMayorMenor(numeros, longitud, eleccion));
+        else if (eleccion==2) System.out.print("El numero menor del array es:" + obtenerMayorMenor(numeros, longitud, eleccion));
+        else ordenarArray(numeros, longitud);
 
         scan.close();
         
     }
 
-    public static int mayorMenor(int numeros[], int cantidad, int decision)
+    public static int obtenerMayorMenor(int numeros[], int cantidad, int decision)
     {
         int temporal = 0;
 
